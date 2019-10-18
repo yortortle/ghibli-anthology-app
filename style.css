@@ -3,16 +3,29 @@ body{
   font-family: sans-serif;
 }
 
+.buttons{
+  
+}
+
+.description{
+  margin: 30px;
+}
 .container{
   margin: 0 auto;
   width: 900px;
-  height: 900px;
+  /* height: 900px; */
   border: 1px solid black;
   padding: 15px;
 }
 .header{
   text-align: center;
   border: 1px solid black;
+  padding: 10px;
+}
+.center{
+  padding: 20px;
+  text-align: left;
+  padding-left: 50px;
 }
 
 .one > img{
@@ -20,4 +33,11 @@ body{
   height: 300px;
 }
 
-.
+.center{
+  border: 1px solid black;
+}
+
+#generatedBtns{
+  /* padding: 5px; */
+  margin-left: 15px;
+}
