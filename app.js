@@ -36,8 +36,9 @@ $ ( () => {
             const $output = $("<p>");
             const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
             $output.text("Title: " + data[i].title + " - Director: " + data[i].director + " - Release Date: " + data[i].release_date);
+            const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
             $buttonOutput.on("click", () => {
-              const $img = $("<img>").attr("src", "img/NAUSICAA_01_NVW1012945.jpg").addClass("modalImage");
+              // const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
               $modalImg.append($img);
               console.log(test);
               $modalTxt.text(test);
