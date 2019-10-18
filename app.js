@@ -14,9 +14,12 @@ $ ( () => {
   const func = () => {
     promise.then(
       (data)=>{
-        console.log(data);
-        for (var i = 0; i < data.length; i++) {
-          console.log(data[i].title);
+        if (input === "TITLE") {
+          console.log(data);
+          for (var i = 1; i <= data.length; i++) {
+            console.log(i + ": " + data[i].title + " " + data[i].director);
+            // console.log(data[i].director);
+          }
         }
       },
       ()=>{
