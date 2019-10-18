@@ -1,0 +1,23 @@
+body{
+  background-color: gray;
+  font-family: sans-serif;
+}
+
+.container{
+  margin: 0 auto;
+  width: 900px;
+  height: 900px;
+  border: 1px solid black;
+  padding: 15px;
+}
+.header{
+  text-align: center;
+  border: 1px solid black;
+}
+
+.one > img{
+  width: 500px;
+  height: 300px;
+}
+
+.
