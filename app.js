@@ -1,5 +1,3 @@
-
-
 $ ( () => {
   let input = "";
   const directorList = [];
@@ -16,16 +14,22 @@ $ ( () => {
     url: "https://ghibliapi.herokuapp.com/films/"
   });
 
+
   const func = () => {
+    const promise = $.ajax({
+      url: "https://ghibliapi.herokuapp.com/films/"
+    });
+
     promise.then(
       (data)=>{
         if (input === "TITLE") {
           console.log(data);
-          for (var i = 1; i <= data.length; i++) {
-            // console.log(i + ": " + data[i].title + " - Director: " + data[i].director + " - Release Date: " + data[i].release_date);
+          $list.empty();
+          for (var i = 0; i <= data.length; i++) {
+            let val = i + 1;
             const $output = $("<p>");
             const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
-            $output.text(i + ": " + data[i].title + " - Director: " + data[i].director + " - Release Date: " + data[i].release_date);
+            $output.text(val + ": " + data[i].title + " - Director: " + data[i].director + " - Release Date: " + data[i].release_date);
             $output.append($buttonOutput);
             $list.append($output);
           }
@@ -33,15 +37,15 @@ $ ( () => {
         else if (input === "DIRECTOR") {
           $list.empty();
           console.log("success");
-          for (var i = 1; i < data.length; i++) {
-            console.log(data[i].director);
-            directorList.push(data[i].director);
-          }
-          console.log(directorList);
-          directorList.sort();
-          console.log(directorList);
           for (var i = 0; i < data.length; i++) {
-            
+            console.log(data[i].director);
+            if (data[i].director === "Hayao Miyazaki") {
+              const $output = $("<p>");
+              const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
+              $output.text("Director: " + data[i].director + " - Title: " + data[i].title + " - Release Date: " + data[i].release_date);
+              $output.append($buttonOutput);
+              $list.append($output);
+            }
           }
         }
 
