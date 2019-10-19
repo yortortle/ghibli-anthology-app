@@ -54,9 +54,19 @@ $ ( () => {
           for (var i = 0; i < data.length; i++) {
             console.log(data[i].director);
             if (data[i].director === "Hayao Miyazaki") {
+              let test = data[i].description;
               const $output = $("<p>");
               const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
               $output.text("Director: " + data[i].director + " - Title: " + data[i].title + " - Release Date: " + data[i].release_date);
+
+              const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+              $buttonOutput.on("click", () => {
+                // const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+                $modalImg.append($img);
+                console.log(test);
+                $modalTxt.text(test);
+                $modal.css("display", "block")
+              })
               $output.append($buttonOutput);
               $list.append($output);
             }
