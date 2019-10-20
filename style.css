@@ -6,13 +6,23 @@
 
 body{
   /* background-color: rgb(100,150,230, 0.6); */
-  background-color: rgb(211,211,211, .9);
+  /* background-color: rgb(211,211,211, .9); */
+  background-color: lightblue;
+
 
   font-family: sans-serif;
 }
 
 .buttons{
-
+  margin: 10px;
+  padding: 8px;
+  border: 1px solid gray;
+  border-style: outset;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6) ;
+  /* text-color: white;
+   */
+   color: white;
 }
 
 .description{
@@ -72,8 +82,8 @@ body{
 }
 
 #txt{
-  background-color: rgba(173, 216, 230, 1);
-  /* background-color: #808080; */
+  /* background-color: rgba(173, 216, 230, 1); */
+  background-color: #F5F5DC;
   padding: 20px;
   height: 600px;
   width: 500px;
@@ -103,6 +113,7 @@ body{
   .container{
     width: 100%;
   }
+
   #modal{
     /* width: 50px; */
     /* height: 50%; */
