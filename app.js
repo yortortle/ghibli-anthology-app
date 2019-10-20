@@ -70,13 +70,111 @@ $ ( () => {
               $output.append($buttonOutput);
               $list.append($output);
             }
-            else {
-              console.log("hello");
+          }
+        }
+        else if (input === "DIRECTOR2") {
+          console.log("test2");
+          $list.empty();
+          console.log("success");
+          for (var i = 0; i < data.length; i++) {
+            console.log(data[i].director);
+            if (data[i].director === "Isao Takahata") {
+              let test = data[i].description;
+              const $output = $("<p>");
+              const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
+              $output.text("Director: " + data[i].director + " - Title: " + data[i].title + " - Release Date: " + data[i].release_date);
+
+              const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+              $buttonOutput.on("click", () => {
+                // const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+                $modalImg.append($img);
+                console.log(test);
+                $modalTxt.text(test);
+                $modal.css("display", "block")
+              })
+              $output.append($buttonOutput);
+              $list.append($output);
             }
           }
         }
+        else if (input === "DIRECTOR3") {
+          console.log("test2");
+          $list.empty();
+          console.log("success");
+          for (var i = 0; i < data.length; i++) {
+            console.log(data[i].director);
+            if (data[i].director === "Yoshifumi Kondō") {
+              let test = data[i].description;
+              const $output = $("<p>");
+              const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
+              $output.text("Director: " + data[i].director + " - Title: " + data[i].title + " - Release Date: " + data[i].release_date);
 
+              const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+              $buttonOutput.on("click", () => {
+                // const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+                $modalImg.append($img);
+                console.log(test);
+                $modalTxt.text(test);
+                $modal.css("display", "block")
+              })
+              $output.append($buttonOutput);
+              $list.append($output);
+            }
+          }
+        }
+        else if (input === "DIRECTOR4") {
+          console.log("test2");
+          $list.empty();
+          console.log("success");
+          for (var i = 0; i < data.length; i++) {
+            console.log(data[i].director);
+            if (data[i].director === "Hiroyuki Morita") {
+              let test = data[i].description;
+              const $output = $("<p>");
+              const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
+              $output.text("Director: " + data[i].director + " - Title: " + data[i].title + " - Release Date: " + data[i].release_date);
+
+              const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+              $buttonOutput.on("click", () => {
+                // const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+                $modalImg.append($img);
+                console.log(test);
+                $modalTxt.text(test);
+                $modal.css("display", "block")
+              })
+              $output.append($buttonOutput);
+              $list.append($output);
+            }
+          }
+        }
+        else if (input === "DIRECTOR5") {
+          console.log("test2");
+          $list.empty();
+          console.log("success");
+          for (var i = 0; i < data.length; i++) {
+            console.log(data[i].director);
+            if (data[i].director === "Gorō Miyazaki") {
+              let test = data[i].description;
+              const $output = $("<p>");
+              const $buttonOutput = $("<button>").text("MORE INFO").addClass("buttons").attr("id", "generatedBtns");
+              $output.text("Director: " + data[i].director + " - Title: " + data[i].title + " - Release Date: " + data[i].release_date);
+
+              const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+              $buttonOutput.on("click", () => {
+                // const $img = $("<img>").attr("src", "img/img2/gh" + i + ".jpg").addClass("modalImage");
+                $modalImg.append($img);
+                console.log(test);
+                $modalTxt.text(test);
+                $modal.css("display", "block")
+              })
+              $output.append($buttonOutput);
+              $list.append($output);
+            }
+          }
+        }
       },
+
+
       ()=>{
         console.log("oops");
       }
@@ -95,11 +193,43 @@ $ ( () => {
     func();
   })
 
+  $("#director2").on("click", () => {
+    console.log("hi");
+    input = "DIRECTOR2";
+    func();
+  })
+
+  $("#director3").on("click", () => {
+    console.log("hi");
+    input = "DIRECTOR3";
+    func();
+  })
+
+  $("#director4").on("click", () => {
+    console.log("hi");
+    input = "DIRECTOR4";
+    func();
+  })
+
+  $("#director5").on("click", () => {
+    console.log("hi");
+    input = "DIRECTOR5";
+    func();
+  })
+
+  $("#director6").on("click", () => {
+    console.log("hi");
+    input = "DIRECTOR3";
+    func();
+  })
+
   $modalBtn.on("click", () => {
     console.log("test");
     // $modalDiv.remove($(".modalImage"));
     $modalImg.empty();
     $modal.css("display", "none")
   })
+
+
 
 });
