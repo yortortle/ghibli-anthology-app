@@ -27,6 +27,7 @@ $ ( () => {
 
     promise.then(
       (data)=>{
+
         if (input === "TITLE") {
           console.log(data);
           $list.empty();
